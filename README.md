@@ -342,19 +342,11 @@ $includeExternal = $false  # Ignore external domains
 
 ---
 
-## 👤 Author
+## 👨‍💻 Author
 
-**Micro-one**  
-📧 contact@micro-one.com  
-🌐 [micro-one.com](https://micro-one.com)
-
----
-
-## 📄 License
-
-© 2008-2025 Micro-one - All rights reserved
-
-This script is provided "as is" without warranty of any kind. The author cannot be held responsible for damages resulting from its use.
+**Micro-one**
+- Website: [micro-one.com](https://micro-one.com)
+- Email: contact@micro-one.com
 
 ---
 
