@@ -328,7 +328,7 @@ $includeExternal = $false  # Ignore external domains
 
 ## 📝 Changelog
 
-### Version 2.0 (10/16/2025)
+### Version 2.0 Augmented by Ai (10/16/2025)
 - 🚀 Added Mermaid and GraphViz support
 - 📊 Improved interactive HTML report
 - 🎨 Better dependency visualization
