@@ -21,7 +21,7 @@ Web Dependency Analyzer (WDA) est un outil d'analyse de sécurité opérationnel
 
 ## ✨ Fonctionnalités
 
-### Analyse Complète
+### Analyse complète
 - ✅ Extraction de toutes les ressources HTML (scripts, CSS, images, polices, médias)
 - ✅ Analyse récursive des dépendances CSS et JavaScript
 - ✅ Support des URLs relatives, absolues et protocol-relative (//)
@@ -29,7 +29,7 @@ Web Dependency Analyzer (WDA) est un outil d'analyse de sécurité opérationnel
 - ✅ Suivi des redirections HTTP
 - ✅ Validation des certificats SSL/TLS
 
-### Types de Ressources Détectés
+### Types de ressources détectés
 - **HTML** - Pages et documents
 - **CSS** - Feuilles de style
 - **JavaScript** - Scripts et bibliothèques
@@ -39,7 +39,7 @@ Web Dependency Analyzer (WDA) est un outil d'analyse de sécurité opérationnel
 - **AJAX** - Points de terminaison JSON et XML
 - **Autres** - Ressources diverses
 
-### Formats d'Export
+### Formats d'export
 
 | Format | Description | Cas d'usage |
 |--------|-------------|-------------|
@@ -77,7 +77,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## 💻 Utilisation
 
-### Utilisation Basique
+### Utilisation basique
 
 ```powershell
 # Analyse simple avec interface interactive
@@ -87,7 +87,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://example.com"
 ```
 
-### Utilisation Avancée
+### Utilisation avancée
 
 ```powershell
 # Spécifier le format de sortie
@@ -100,7 +100,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://example.com" -OutputFormat "both"
 ```
 
-### Paramètres Disponibles
+### Paramètres disponibles
 
 | Paramètre | Type | Par défaut | Description |
 |-----------|------|------------|-------------|
@@ -112,7 +112,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## ⚙️ Configuration
 
-### Options d'Analyse
+### Options d'analyse
 
 Modifiez ces variables dans le script pour personnaliser l'analyse :
 
@@ -129,7 +129,7 @@ $checkSSL = $true                # Vérifier les certificats SSL
 $userAgent = "Mozilla/5.0..."    # Chaîne User-Agent personnalisée
 ```
 
-### Options de Filtrage
+### Options de filtrage
 
 ```powershell
 ## Inclusion de ressources
@@ -139,7 +139,7 @@ $includeInline = $true           # Inclure les scripts/styles inline
 $includeDataURIs = $false        # Inclure les data: URIs
 ```
 
-### Options d'Affichage
+### Options d'affichage
 
 ```powershell
 ## Affichage console
@@ -150,9 +150,9 @@ $verboseOutput = $false          # Informations détaillées
 
 ---
 
-## 📊 Rapports Générés
+## 📊 Rapports générés
 
-### Rapport Texte (.txt)
+### Rapport texte (.txt)
 
 Rapport simple et lisible contenant :
 - Statistiques générales
@@ -204,7 +204,7 @@ dot -Tpng WebAnalysis_*.dot -o dependencies.png
 
 ---
 
-## 📈 Statistiques Collectées
+## 📈 Statistiquescollectées
 
 Le script collecte automatiquement :
 
@@ -218,9 +218,9 @@ Le script collecte automatiquement :
 
 ---
 
-## 🔒 Utilisation en Sécurité
+## 🔒 Utilisation en sécurité
 
-### Cas d'Usage Recommandés
+### Cas d'usage recommandés
 
 ✅ **Audit de sécurité** - Identifier les dépendances tierces  
 ✅ **Analyse OSINT** - Cartographier l'infrastructure web  
@@ -228,7 +228,7 @@ Le script collecte automatiquement :
 ✅ **Optimisation** - Identifier les ressources lourdes  
 ✅ **Documentation** - Cartographier l'architecture  
 
-### Considérations Légales
+### Considérations légales
 
 ⚠️ **Important** : N'utilisez cet outil que sur :
 - Vos propres sites web
@@ -242,9 +242,9 @@ Le script collecte automatiquement :
 
 ---
 
-## 🛠️ Exemples d'Utilisation
+## 🛠️ Exemples d'utilisation
 
-### Exemple 1 : Analyse Rapide
+### Exemple 1 : Analyse rapide
 
 ```powershell
 # Analyse basique d'un site
@@ -253,7 +253,7 @@ Le script collecte automatiquement :
 
 **Résultat** : Rapports TXT + HTML dans `.\WebAnalysis\`
 
-### Exemple 2 : Export JSON pour Intégration
+### Exemple 2 : Export JSON pour intégration
 
 ```powershell
 # Export JSON uniquement
@@ -265,7 +265,7 @@ Le script collecte automatiquement :
 
 **Résultat** : Fichier JSON pour traitement automatisé
 
-### Exemple 3 : Documentation Visuelle
+### Exemple 3 : Documentation visuelle
 
 ```powershell
 # Génération de diagramme Mermaid
@@ -276,7 +276,7 @@ Le script collecte automatiquement :
 
 **Résultat** : Diagramme .mmd pour documentation
 
-### Exemple 4 : Audit Complet
+### Exemple 4 : Audit complet
 
 ```powershell
 # Analyse exhaustive avec GraphViz
@@ -309,14 +309,14 @@ dot -Tpng *.dot -o graphe-dependances.png
 $checkSSL = $false
 ```
 
-### Timeout des Requêtes
+### Timeout des requêtes
 
 **Solution** : Augmentez le timeout
 ```powershell
 $timeoutSeconds = 60
 ```
 
-### Trop de Ressources Détectées
+### Trop de ressources détectées
 
 **Solution** : Limitez l'analyse
 ```powershell
@@ -326,9 +326,9 @@ $includeExternal = $false  # Ignorer les domaines externes
 
 ---
 
-## 📝 Historique des Versions
+## 📝 Historique des versions
 
-### Version 2.0 Augmenté par IA (16/10/2025)
+### Version 2.0 augmenté par IA (16/10/2025)
 - 🚀 Ajout support Mermaid et GraphViz
 - 📊 Rapport HTML interactif amélioré
 - 🎨 Meilleure visualisation des dépendances
@@ -358,7 +358,7 @@ Pour signaler un bug ou suggérer une amélioration :
 
 ---
 
-## 📚 Ressources Supplémentaires
+## 📚 Ressources supplémentaires
 
 ### Outils Complémentaires
 - **Burp Suite** - Proxy d'interception HTTP
