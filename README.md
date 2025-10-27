@@ -21,7 +21,7 @@ Web Dependency Analyzer (WDA) is an operational security analysis tool that iden
 
 ## ✨ Features
 
-### Complete Analysis
+### Complete analysis
 - ✅ Extract all HTML resources (scripts, CSS, images, fonts, media)
 - ✅ Recursive analysis of CSS and JavaScript dependencies
 - ✅ Support for relative, absolute, and protocol-relative URLs (//)
@@ -29,7 +29,7 @@ Web Dependency Analyzer (WDA) is an operational security analysis tool that iden
 - ✅ HTTP redirect tracking
 - ✅ SSL/TLS certificate validation
 
-### Detected Resource Types
+### Detected resource types
 - **HTML** - Pages and documents
 - **CSS** - Stylesheets
 - **JavaScript** - Scripts and libraries
@@ -39,7 +39,7 @@ Web Dependency Analyzer (WDA) is an operational security analysis tool that iden
 - **AJAX** - JSON and XML endpoints
 - **Other** - Various resources
 
-### Export Formats
+### Export formats
 
 | Format | Description | Use Case |
 |--------|-------------|----------|
@@ -66,7 +66,7 @@ Web Dependency Analyzer (WDA) is an operational security analysis tool that iden
 Invoke-WebRequest -Uri "[https://raw.githubusercontent.com/jbianco-prog/WebDependencyAnalysis/refs/heads/master/WebDependencyAnalysis.ps1](https://raw.githubusercontent.com/jbianco-prog/WebDependencyAnalysis/refs/heads/main/WebDependencyAnalysis.ps1)" -OutFile "WebDependencyAnalysis.ps1"
 ```
 
-### Configure Execution Policy
+### Configure execution policy
 
 ```powershell
 # Allow script execution (if needed)
@@ -77,7 +77,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## 💻 Usage
 
-### Basic Usage
+### Basic usage
 
 ```powershell
 # Simple analysis with interactive interface
@@ -87,7 +87,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://example.com"
 ```
 
-### Advanced Usage
+### Advanced usage
 
 ```powershell
 # Specify output format
@@ -100,7 +100,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://example.com" -OutputFormat "both"
 ```
 
-### Available Parameters
+### Available parameters
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -112,7 +112,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## ⚙️ Configuration
 
-### Analysis Options
+### Analysis options
 
 Modify these variables in the script to customize the analysis:
 
@@ -129,7 +129,7 @@ $checkSSL = $true                # Check SSL certificates
 $userAgent = "Mozilla/5.0..."    # Custom User-Agent string
 ```
 
-### Filtering Options
+### Filtering options
 
 ```powershell
 ## Resource inclusion
@@ -139,7 +139,7 @@ $includeInline = $true           # Include inline scripts/styles
 $includeDataURIs = $false        # Include data: URIs
 ```
 
-### Display Options
+### Display options
 
 ```powershell
 ## Console display
@@ -150,9 +150,9 @@ $verboseOutput = $false          # Detailed information
 
 ---
 
-## 📊 Generated Reports
+## 📊 Generated reports
 
-### Text Report (.txt)
+### Text report (.txt)
 
 Simple and readable report containing:
 - General statistics
@@ -160,7 +160,7 @@ Simple and readable report containing:
 - Resources by type
 - Details of each resource (URL, status, size)
 
-### HTML Report (.html)
+### HTML report (.html)
 
 Interactive report with:
 - Visual dashboard with statistics
@@ -169,7 +169,7 @@ Interactive report with:
 - Loading timeline
 - Color coding by resource type
 
-### JSON Export (.json)
+### JSON export (.json)
 
 Complete data structure:
 ```json
@@ -182,7 +182,7 @@ Complete data structure:
 }
 ```
 
-### Mermaid Diagram (.mmd)
+### Mermaid diagram (.mmd)
 
 Dependency visualization as a flowchart:
 ```mermaid
@@ -194,7 +194,7 @@ graph TB
 
 View at [mermaid.live](https://mermaid.live/)
 
-### GraphViz Diagram (.dot)
+### GraphViz diagram (.dot)
 
 Dependency graph for image generation:
 ```bash
@@ -204,7 +204,7 @@ dot -Tpng WebAnalysis_*.dot -o dependencies.png
 
 ---
 
-## 📈 Collected Statistics
+## 📈 Collected statistics
 
 The script automatically collects:
 
@@ -218,7 +218,7 @@ The script automatically collects:
 
 ---
 
-## 🔒 Security Usage
+## 🔒 Security usage
 
 ### Recommended Use Cases
 
@@ -228,7 +228,7 @@ The script automatically collects:
 ✅ **Optimization** - Identify heavy resources  
 ✅ **Documentation** - Map architecture  
 
-### Legal Considerations
+### Legal considerations
 
 ⚠️ **Important**: Only use this tool on:
 - Your own websites
@@ -242,9 +242,9 @@ The script automatically collects:
 
 ---
 
-## 🛠️ Usage Examples
+## 🛠️ Usage examples
 
-### Example 1: Quick Analysis
+### Example 1: Quick analysis
 
 ```powershell
 # Basic site analysis
@@ -253,7 +253,7 @@ The script automatically collects:
 
 **Result**: TXT + HTML reports in `.\WebAnalysis\`
 
-### Example 2: JSON Export for Integration
+### Example 2: JSON export for integration
 
 ```powershell
 # JSON export only
@@ -265,7 +265,7 @@ The script automatically collects:
 
 **Result**: JSON file for automated processing
 
-### Example 3: Visual Documentation
+### Example 3: Visual documentation
 
 ```powershell
 # Generate Mermaid diagram
@@ -276,7 +276,7 @@ The script automatically collects:
 
 **Result**: .mmd diagram for documentation
 
-### Example 4: Complete Audit
+### Example 4: Complete audit
 
 ```powershell
 # Comprehensive analysis with GraphViz
@@ -309,14 +309,14 @@ dot -Tpng *.dot -o dependency-graph.png
 $checkSSL = $false
 ```
 
-### Request Timeout
+### Request timeout
 
 **Solution**: Increase timeout
 ```powershell
 $timeoutSeconds = 60
 ```
 
-### Too Many Detected Resources
+### Too many detected resources
 
 **Solution**: Limit analysis
 ```powershell
@@ -328,7 +328,7 @@ $includeExternal = $false  # Ignore external domains
 
 ## 📝 Changelog
 
-### Version 2.0 Augmented by Ai (10/16/2025)
+### Version 2.0 augmented by Ai (10/16/2025)
 - 🚀 Added Mermaid and GraphViz support
 - 📊 Improved interactive HTML report
 - 🎨 Better dependency visualization
@@ -358,9 +358,9 @@ To report a bug or suggest an improvement:
 
 ---
 
-## 📚 Additional Resources
+## 📚 Additional resources
 
-### Complementary Tools
+### Complementary tools
 - **Burp Suite** - HTTP interception proxy
 - **OWASP ZAP** - Vulnerability scanner
 - **Wappalyzer** - Web technology detection
