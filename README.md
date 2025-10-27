@@ -62,8 +62,8 @@ Web Dependency Analyzer (WDA) is an operational security analysis tool that iden
 ### Download
 
 ```powershell
-# Clone or download the script
-# Place the file in a directory of your choice
+# Clone or download the script file
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jbianco-prog/WebDependencyAnalysis/refs/heads/master/WebDependencyAnalysis.ps1" -OutFile "WebDependencyAnalysis.ps1"
 ```
 
 ### Configure Execution Policy
