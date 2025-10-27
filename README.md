@@ -1,5 +1,5 @@
 # Web Dependency Analyzer (WDA)
-> PowerShell script that Analyze all Web Dependency
+> PowerShell script to analyze and visualize all HTTP/HTTPS dependencies of a web page*
 
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg)](https://github.com/PowerShell/PowerShell)
 [![License](https://img.shields.io/badge/License-GPL-green.svg)](LICENSE)
@@ -9,169 +9,169 @@
 
 ## 📋 Description
 
-Web Dependency Analyzer (WDA) est un outil d'analyse de sécurité opérationnelle qui permet d'identifier et de cartographier toutes les ressources externes chargées par une page web. Il aide à :
+Web Dependency Analyzer (WDA) is an operational security analysis tool that identifies and maps all external resources loaded by a web page. It helps to:
 
-- **Auditer la surface d'attaque** d'une application web
-- **Identifier les dépendances tierces** (CDN, bibliothèques externes)
-- **Détecter les ressources non sécurisées** (HTTP vs HTTPS)
-- **Visualiser l'architecture** de chargement des ressources
-- **Analyser les performances** (tailles, temps de chargement)
+- **Audit the attack surface** of a web application
+- **Identify third-party dependencies** (CDNs, external libraries)
+- **Detect insecure resources** (HTTP vs HTTPS)
+- **Visualize the architecture** of resource loading
+- **Analyze performance** (sizes, loading times)
 
 ---
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-### Analyse Complète
-- ✅ Extraction de toutes les ressources HTML (scripts, CSS, images, fonts, médias)
-- ✅ Analyse récursive des dépendances CSS et JavaScript
-- ✅ Support des URLs relatives, absolues et protocol-relative (//)
-- ✅ Détection automatique du type de ressource
-- ✅ Suivi des redirections HTTP
-- ✅ Validation des certificats SSL/TLS
+### Complete Analysis
+- ✅ Extract all HTML resources (scripts, CSS, images, fonts, media)
+- ✅ Recursive analysis of CSS and JavaScript dependencies
+- ✅ Support for relative, absolute, and protocol-relative URLs (//)
+- ✅ Automatic resource type detection
+- ✅ HTTP redirect tracking
+- ✅ SSL/TLS certificate validation
 
-### Types de Ressources Détectés
-- **HTML** - Pages et documents
-- **CSS** - Feuilles de style
-- **JavaScript** - Scripts et bibliothèques
+### Detected Resource Types
+- **HTML** - Pages and documents
+- **CSS** - Stylesheets
+- **JavaScript** - Scripts and libraries
 - **Images** - JPG, PNG, GIF, WebP, SVG, etc.
 - **Fonts** - WOFF, WOFF2, TTF, EOT, OTF
-- **Media** - Vidéos (MP4, WebM) et audio (MP3, WAV, OGG)
-- **AJAX** - Endpoints JSON et XML
-- **Autres** - Ressources diverses
+- **Media** - Videos (MP4, WebM) and audio (MP3, WAV, OGG)
+- **AJAX** - JSON and XML endpoints
+- **Other** - Various resources
 
-### Formats d'Export
+### Export Formats
 
-| Format | Description | Utilisation |
-|--------|-------------|-------------|
-| **TXT** | Rapport texte simple | Lecture rapide, logs |
-| **HTML** | Rapport interactif avec graphiques | Visualisation complète |
-| **JSON** | Export structuré | Intégration avec d'autres outils |
-| **Mermaid** | Diagramme de flux | Documentation, présentation |
-| **GraphViz** | Graphe DOT | Visualisation avancée |
+| Format | Description | Use Case |
+|--------|-------------|----------|
+| **TXT** | Simple text report | Quick reading, logs |
+| **HTML** | Interactive report with charts | Complete visualization |
+| **JSON** | Structured export | Integration with other tools |
+| **Mermaid** | Flow diagram | Documentation, presentation |
+| **GraphViz** | DOT graph | Advanced visualization |
 
 ---
 
 ## 🚀 Installation
 
-### Prérequis
+### Prerequisites
 
-- **Windows** avec PowerShell 5.1 ou supérieur
-- **.NET Framework** 4.5 ou supérieur
-- **Accès Internet** pour analyser les sites web
+- **Windows** with PowerShell 5.1 or higher
+- **.NET Framework** 4.5 or higher
+- **Internet access** to analyze websites
 
-### Téléchargement
+### Download
 
 ```powershell
-# Cloner ou télécharger le script
-# Placer le fichier dans un répertoire de votre choix
+# Clone or download the script
+# Place the file in a directory of your choice
 ```
 
-### Configuration de la politique d'exécution
+### Configure Execution Policy
 
 ```powershell
-# Autoriser l'exécution de scripts (si nécessaire)
+# Allow script execution (if needed)
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ---
 
-## 💻 Utilisation
+## 💻 Usage
 
-### Utilisation Basique
+### Basic Usage
 
 ```powershell
-# Analyse simple avec interface interactive
+# Simple analysis with interactive interface
 .\WebDependencyAnalyzer.ps1
 
-# Analyse avec URL en paramètre
+# Analysis with URL parameter
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://example.com"
 ```
 
-### Utilisation Avancée
+### Advanced Usage
 
 ```powershell
-# Spécifier le format de sortie
+# Specify output format
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://example.com" -OutputFormat "html"
 
-# Personnaliser le dossier de sortie
+# Customize output folder
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://example.com" -OutputFolder "C:\Reports"
 
-# Analyse complète avec tous les formats
+# Complete analysis with all formats
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://example.com" -OutputFormat "both"
 ```
 
-### Paramètres Disponibles
+### Available Parameters
 
-| Paramètre | Type | Par défaut | Description |
-|-----------|------|------------|-------------|
-| `-TargetURL` | String | (interactif) | URL à analyser |
-| `-OutputFormat` | String | "both" | Format : text, html, json, mermaid, graphviz, both |
-| `-OutputFolder` | String | ".\WebAnalysis" | Dossier de destination des rapports |
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `-TargetURL` | String | (interactive) | URL to analyze |
+| `-OutputFormat` | String | "both" | Format: text, html, json, mermaid, graphviz, both |
+| `-OutputFolder` | String | ".\WebAnalysis" | Destination folder for reports |
 
 ---
 
 ## ⚙️ Configuration
 
-### Options d'Analyse
+### Analysis Options
 
-Modifiez ces variables dans le script pour personnaliser l'analyse :
+Modify these variables in the script to customize the analysis:
 
 ```powershell
-## Profondeur de récursion
-$maxDepth = 1                    # 1 = dépendances directes uniquement
+## Recursion depth
+$maxDepth = 1                    # 1 = direct dependencies only
 
-## Comportement réseau
-$followRedirects = $true         # Suivre les redirections HTTP
-$timeoutSeconds = 30             # Timeout des requêtes (secondes)
-$checkSSL = $true                # Vérifier les certificats SSL
+## Network behavior
+$followRedirects = $true         # Follow HTTP redirects
+$timeoutSeconds = 30             # Request timeout (seconds)
+$checkSSL = $true                # Check SSL certificates
 
 ## User Agent
-$userAgent = "Mozilla/5.0..."    # Chaîne User-Agent personnalisée
+$userAgent = "Mozilla/5.0..."    # Custom User-Agent string
 ```
 
-### Options de Filtrage
+### Filtering Options
 
 ```powershell
-## Inclusion de ressources
-$includeExternal = $true         # Inclure les domaines externes
-$includeCDN = $true              # Inclure les ressources CDN
-$includeInline = $true           # Inclure les scripts/styles inline
-$includeDataURIs = $false        # Inclure les data: URIs
+## Resource inclusion
+$includeExternal = $true         # Include external domains
+$includeCDN = $true              # Include CDN resources
+$includeInline = $true           # Include inline scripts/styles
+$includeDataURIs = $false        # Include data: URIs
 ```
 
-### Options d'Affichage
+### Display Options
 
 ```powershell
-## Affichage console
-$showProgress = $true            # Afficher la progression
-$colorOutput = $true             # Sortie colorée
-$verboseOutput = $false          # Informations détaillées
+## Console display
+$showProgress = $true            # Show progress
+$colorOutput = $true             # Colored output
+$verboseOutput = $false          # Detailed information
 ```
 
 ---
 
-## 📊 Rapports Générés
+## 📊 Generated Reports
 
-### Rapport Texte (.txt)
+### Text Report (.txt)
 
-Rapport simple et lisible contenant :
-- Statistiques générales
-- Liste des domaines uniques
-- Ressources par type
-- Détails de chaque ressource (URL, statut, taille)
+Simple and readable report containing:
+- General statistics
+- List of unique domains
+- Resources by type
+- Details of each resource (URL, status, size)
 
-### Rapport HTML (.html)
+### HTML Report (.html)
 
-Rapport interactif avec :
-- Dashboard visuel avec statistiques
-- Graphiques de répartition
-- Tableaux triables et filtrables
-- Timeline de chargement
-- Code couleur par type de ressource
+Interactive report with:
+- Visual dashboard with statistics
+- Distribution charts
+- Sortable and filterable tables
+- Loading timeline
+- Color coding by resource type
 
-### Export JSON (.json)
+### JSON Export (.json)
 
-Structure de données complète :
+Complete data structure:
 ```json
 {
   "targetURL": "https://example.com",
@@ -182,9 +182,9 @@ Structure de données complète :
 }
 ```
 
-### Diagramme Mermaid (.mmd)
+### Mermaid Diagram (.mmd)
 
-Visualisation des dépendances sous forme de flowchart :
+Dependency visualization as a flowchart:
 ```mermaid
 graph TB
     Start[example.com] --> CSS1[style.css]
@@ -192,157 +192,157 @@ graph TB
     ...
 ```
 
-Visualisez sur [mermaid.live](https://mermaid.live/)
+View at [mermaid.live](https://mermaid.live/)
 
-### Diagramme GraphViz (.dot)
+### GraphViz Diagram (.dot)
 
-Graphe de dépendances pour génération d'images :
+Dependency graph for image generation:
 ```bash
-# Générer une image PNG
+# Generate a PNG image
 dot -Tpng WebAnalysis_*.dot -o dependencies.png
 ```
 
 ---
 
-## 📈 Statistiques Collectées
+## 📈 Collected Statistics
 
-Le script collecte automatiquement :
+The script automatically collects:
 
-- **Nombre total de requêtes**
-- **Requêtes réussies / échouées**
-- **Taille totale des ressources**
-- **Nombre de domaines uniques**
-- **Répartition par type de ressource**
-- **Domaines externes vs internes**
-- **Ressources HTTPS vs HTTP**
-
----
-
-## 🔒 Utilisation en Sécurité
-
-### Cas d'Usage Recommandés
-
-✅ **Audit de sécurité** - Identifier les dépendances tierces  
-✅ **Analyse OSINT** - Cartographier l'infrastructure web  
-✅ **Test de conformité** - Vérifier l'utilisation de HTTPS  
-✅ **Optimisation** - Identifier les ressources lourdes  
-✅ **Documentation** - Cartographier l'architecture  
-
-### Considérations Légales
-
-⚠️ **Important** : N'utilisez cet outil que sur :
-- Vos propres sites web
-- Sites avec autorisation explicite
-- Sites publics dans un cadre légal (OSINT passive)
-
-❌ **Ne pas utiliser pour** :
-- Scanner massivement des sites sans autorisation
-- Exploiter des vulnérabilités découvertes
-- Contourner des protections
+- **Total number of requests**
+- **Successful / failed requests**
+- **Total resource size**
+- **Number of unique domains**
+- **Distribution by resource type**
+- **External vs internal domains**
+- **HTTPS vs HTTP resources**
 
 ---
 
-## 🛠️ Exemples d'Utilisation
+## 🔒 Security Usage
 
-### Exemple 1 : Analyse Rapide
+### Recommended Use Cases
+
+✅ **Security audit** - Identify third-party dependencies  
+✅ **OSINT analysis** - Map web infrastructure  
+✅ **Compliance testing** - Verify HTTPS usage  
+✅ **Optimization** - Identify heavy resources  
+✅ **Documentation** - Map architecture  
+
+### Legal Considerations
+
+⚠️ **Important**: Only use this tool on:
+- Your own websites
+- Sites with explicit authorization
+- Public sites within a legal framework (passive OSINT)
+
+❌ **Do not use for**:
+- Mass scanning sites without authorization
+- Exploiting discovered vulnerabilities
+- Bypassing protections
+
+---
+
+## 🛠️ Usage Examples
+
+### Example 1: Quick Analysis
 
 ```powershell
-# Analyse basique d'un site
+# Basic site analysis
 .\WebDependencyAnalyzer.ps1 -TargetURL "https://www.example.com"
 ```
 
-**Résultat** : Rapports TXT + HTML dans `.\WebAnalysis\`
+**Result**: TXT + HTML reports in `.\WebAnalysis\`
 
-### Exemple 2 : Export JSON pour Intégration
+### Example 2: JSON Export for Integration
 
 ```powershell
-# Export JSON uniquement
+# JSON export only
 .\WebDependencyAnalyzer.ps1 `
     -TargetURL "https://api.example.com" `
     -OutputFormat "json" `
     -OutputFolder "C:\SecurityAudits"
 ```
 
-**Résultat** : Fichier JSON pour traitement automatisé
+**Result**: JSON file for automated processing
 
-### Exemple 3 : Documentation Visuelle
+### Example 3: Visual Documentation
 
 ```powershell
-# Génération de diagramme Mermaid
+# Generate Mermaid diagram
 .\WebDependencyAnalyzer.ps1 `
     -TargetURL "https://myapp.com" `
     -OutputFormat "mermaid"
 ```
 
-**Résultat** : Diagramme .mmd pour documentation
+**Result**: .mmd diagram for documentation
 
-### Exemple 4 : Audit Complet
+### Example 4: Complete Audit
 
 ```powershell
-# Analyse exhaustive avec GraphViz
+# Comprehensive analysis with GraphViz
 .\WebDependencyAnalyzer.ps1 `
     -TargetURL "https://corporate-site.com" `
     -OutputFormat "both" `
     -OutputFolder ".\Audit_$(Get-Date -Format 'yyyyMMdd')"
 
-# Générer le graphe PNG
+# Generate PNG graph
 cd ".\Audit_20251027"
 dot -Tpng *.dot -o dependency-graph.png
 ```
 
-**Résultat** : Audit complet avec visualisation graphique
+**Result**: Complete audit with graphical visualization
 
 ---
 
-## 🔧 Dépannage
+## 🔧 Troubleshooting
 
-### Erreur : "Impossible de charger le contenu HTML"
+### Error: "Cannot load HTML content"
 
-**Solution** : Le site utilise du JavaScript pour charger le contenu
-- ✅ Utilisez un navigateur headless (Selenium, Puppeteer)
-- ✅ Analysez le trafic réseau avec les DevTools
+**Solution**: The site uses JavaScript to load content
+- ✅ Use a headless browser (Selenium, Puppeteer)
+- ✅ Analyze network traffic with DevTools
 
-### Erreur : "Certificat SSL invalide"
+### Error: "Invalid SSL certificate"
 
-**Solution** : Désactivez temporairement la vérification SSL
+**Solution**: Temporarily disable SSL verification
 ```powershell
 $checkSSL = $false
 ```
 
-### Timeout des requêtes
+### Request Timeout
 
-**Solution** : Augmentez le timeout
+**Solution**: Increase timeout
 ```powershell
 $timeoutSeconds = 60
 ```
 
-### Trop de ressources détectées
+### Too Many Detected Resources
 
-**Solution** : Limitez l'analyse
+**Solution**: Limit analysis
 ```powershell
-$maxDepth = 1              # Pas de récursion
-$includeExternal = $false  # Ignorer les domaines externes
+$maxDepth = 1              # No recursion
+$includeExternal = $false  # Ignore external domains
 ```
 
 ---
 
 ## 📝 Changelog
 
-### Version 2.0 (16/10/2025)
-- 🚀 Ajout support Mermaid et GraphViz
-- 📊 Rapport HTML interactif amélioré
-- 🎨 Meilleure visualisation des dépendances
-- ⚡ Optimisation des performances
-- 🔒 Amélioration de la gestion SSL/TLS
+### Version 2.0 (10/16/2025)
+- 🚀 Added Mermaid and GraphViz support
+- 📊 Improved interactive HTML report
+- 🎨 Better dependency visualization
+- ⚡ Performance optimization
+- 🔒 Enhanced SSL/TLS handling
 
 ### Version 1.0 (10/10/2008)
-- 🎉 Version initiale
-- 📄 Rapports TXT et HTML
-- 🔍 Analyse de base des dépendances
+- 🎉 Initial version
+- 📄 TXT and HTML reports
+- 🔍 Basic dependency analysis
 
 ---
 
-## 👤 Auteur
+## 👤 Author
 
 **Micro-one**  
 📧 contact@micro-one.com  
@@ -350,29 +350,29 @@ $includeExternal = $false  # Ignorer les domaines externes
 
 ---
 
-## 📄 Licence
+## 📄 License
 
-© 2008-2025 Micro-one - Tous droits réservés
+© 2008-2025 Micro-one - All rights reserved
 
-Ce script est fourni "tel quel" sans garantie d'aucune sorte. L'auteur ne peut être tenu responsable des dommages résultant de son utilisation.
+This script is provided "as is" without warranty of any kind. The author cannot be held responsible for damages resulting from its use.
 
 ---
 
 ## 🤝 Contribution
 
-Pour signaler un bug ou suggérer une amélioration :
-- 📧 Contactez contact@micro-one.com
-- 🌐 Consultez [micro-one.com](https://micro-one.com)
+To report a bug or suggest an improvement:
+- 📧 Contact contact@micro-one.com
+- 🌐 Visit [micro-one.com](https://micro-one.com)
 
 ---
 
-## 📚 Ressources Supplémentaires
+## 📚 Additional Resources
 
-### Outils Complémentaires
-- **Burp Suite** - Proxy d'interception HTTP
-- **OWASP ZAP** - Scanner de vulnérabilités
-- **Wappalyzer** - Détection de technologies web
-- **BuiltWith** - Analyse de stack technique
+### Complementary Tools
+- **Burp Suite** - HTTP interception proxy
+- **OWASP ZAP** - Vulnerability scanner
+- **Wappalyzer** - Web technology detection
+- **BuiltWith** - Technical stack analysis
 
 ### Documentation
 - [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
@@ -381,4 +381,4 @@ Pour signaler un bug ou suggérer une amélioration :
 
 ---
 
-**⚡ Analyse rapide. Visualisation claire. Sécurité renforcée.**
+**⚡ Fast analysis. Clear visualization. Enhanced security.**
