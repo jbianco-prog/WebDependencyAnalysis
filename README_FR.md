@@ -1,5 +1,5 @@
 # Web Dependency Analyzer (WDA)
-> Script PowerShell pour analyser et visualiser toutes les dépendances HTTP/HTTPS d'une page web*
+> Script PowerShell pour analyser et visualiser toutes les dépendances HTTP/HTTPS d'une page web
 
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg)](https://github.com/PowerShell/PowerShell)
 [![License](https://img.shields.io/badge/License-GPL-green.svg)](LICENSE)
